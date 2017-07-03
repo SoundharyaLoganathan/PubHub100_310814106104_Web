@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.bookapp.dao.BookDAO;
 import com.bookapp.model.Book;
 
-@WebServlet("/ListServlet")
+@WebServlet("/ListServlet") 
 public class ListServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

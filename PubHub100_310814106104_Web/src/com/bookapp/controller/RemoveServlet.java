@@ -14,7 +14,7 @@ import com.bookapp.model.Book;
 
 @WebServlet("/RemoveServlet")
 public class RemoveServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;  
        
     
     public RemoveServlet() {

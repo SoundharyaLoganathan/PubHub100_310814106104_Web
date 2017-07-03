@@ -17,7 +17,7 @@ import com.bookapp.model.User;
 public class UpdateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public UpdateServlet() {
+	public UpdateServlet() { 
 		super();
 		// TODO Auto-generated constructor stub
 	}

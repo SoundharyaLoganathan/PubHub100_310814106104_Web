@@ -14,7 +14,7 @@ import com.bookapp.model.User;
 
 
 @WebServlet("/RegistrationServlet")
-public class RegistrationServlet extends HttpServlet {
+public class RegistrationServlet extends HttpServlet { 
 	private static final long serialVersionUID = 1L;
 
     public RegistrationServlet() {

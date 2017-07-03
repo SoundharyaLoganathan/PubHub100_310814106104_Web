@@ -34,16 +34,8 @@ public class UpdateServlet extends HttpServlet {
 		book.setPrice(price);
 
 		BookDAO dao = new BookDAO();
-		try {
-			dao.update(book);
-			response.sendRedirect("success.jsp");
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		dao.update(book);
+		response.sendRedirect("success.jsp");
 
 	}
 

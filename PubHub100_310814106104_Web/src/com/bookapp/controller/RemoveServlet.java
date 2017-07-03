@@ -40,13 +40,8 @@ public class RemoveServlet extends HttpServlet {
 		book.setId(id);
 		
 		BookDAO dao=new BookDAO();
-		try {
-			dao.delete(book);
-			response.sendRedirect("success.jsp");
-		} catch (ClassNotFoundException | SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		dao.delete(book);
+		response.sendRedirect("success.jsp");
 		
 		doGet(request, response);
 	}

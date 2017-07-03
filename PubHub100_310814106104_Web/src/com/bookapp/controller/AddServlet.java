@@ -40,17 +40,9 @@ public class AddServlet extends HttpServlet {
 		book.setPrice(price);
 		
 		BookDAO dao=new BookDAO();
-		try {
-			dao.addBook(book);
-			System.out.println("Book Successfully Added");
-			response.sendRedirect("success.jsp");
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		dao.addBook(book);
+		System.out.println("Book Successfully Added");
+		response.sendRedirect("success.jsp");
 		
 	}
 

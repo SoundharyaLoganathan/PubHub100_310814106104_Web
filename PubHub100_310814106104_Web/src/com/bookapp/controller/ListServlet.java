@@ -28,23 +28,14 @@ public class ListServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 
 		BookDAO dao = new BookDAO();
-		try {
-			List<Book> books = dao.listAll();
-			System.out.println(books.size());
-			if (books.size() > 0) {
-				RequestDispatcher rd = request.getRequestDispatcher("list.jsp");
-				request.setAttribute("books", books);
-				rd.forward(request, response);
-			} else {
-				response.sendRedirect("failure.jsp");
-			}
-
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		List<Book> books = dao.listAll();
+		System.out.println(books.size());
+		if (books.size() > 0) {
+			RequestDispatcher rd = request.getRequestDispatcher("list.jsp");
+			request.setAttribute("books", books);
+			rd.forward(request, response);
+		} else {
+			response.sendRedirect("failure.jsp");
 		}
 
 	}
